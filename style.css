@@ -1,0 +1,1333 @@
+/* =========================================
+   GENERAL WEBSITE
+   ========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #222;
+    background-color: white;
+}
+
+
+/* =========================================
+   HEADER
+   ========================================= */
+
+.site-header {
+    width: 100%;
+    min-height: 120px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 15px 5%;
+
+    background-color: white;
+}
+
+
+/* =========================================
+   MIRZAEI LAB LOGO
+   ========================================= */
+
+.lab-logo-link {
+    display: flex;
+    align-items: center;
+
+    flex-shrink: 0;
+
+    text-decoration: none;
+}
+
+.lab-logo {
+    display: block;
+
+    width: 190px;
+    height: 100px;
+
+    object-fit: contain;
+    object-position: left center;
+}
+
+
+/* =========================================
+   NAVIGATION
+   ========================================= */
+
+.site-header nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 38px;
+
+    margin-left: auto;
+}
+
+.site-header nav > a,
+.site-header .dropbtn {
+    color: #222;
+
+    text-decoration: none;
+
+    font-size: 17px;
+    font-weight: 500;
+
+    white-space: nowrap;
+
+    margin: 0;
+}
+
+.site-header nav > a:hover,
+.site-header .dropbtn:hover {
+    color: #777;
+}
+
+
+/* =========================================
+   X LINK
+   ========================================= */
+
+.site-header .x-link {
+    font-size: 22px;
+    font-weight: 500;
+
+    margin-left: 15px;
+}
+
+
+/* =========================================
+   TEAM DROPDOWN
+   ========================================= */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+
+    position: absolute;
+
+    top: 100%;
+    left: 0;
+
+    min-width: 240px;
+
+    background-color: white;
+
+    padding: 12px 0;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+
+    z-index: 1000;
+}
+
+.dropdown-content a {
+    display: block;
+
+    padding: 12px 20px;
+
+    color: #222;
+
+    text-decoration: none;
+
+    font-size: 16px;
+
+    white-space: nowrap;
+}
+
+.dropdown-content a:hover {
+    background-color: #f5f5f5;
+    color: #777;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+/* =========================================
+   HOME PAGE - HERO
+   ========================================= */
+
+.home-hero {
+    width: 100%;
+    min-height: 650px;
+
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.72) 0%,
+            rgba(0, 0, 0, 0.58) 45%,
+            rgba(0, 0, 0, 0.20) 100%
+        ),
+        url("assets/home1.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+}
+
+.home-hero-content {
+    width: 86%;
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding: 100px 0;
+
+    color: white;
+}
+
+.home-hero-content h1 {
+    max-width: 950px;
+
+    margin: 0 0 35px 0;
+
+    font-size: 64px;
+    line-height: 1.08;
+
+    color: white;
+
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+.home-hero-content p {
+    max-width: 850px;
+
+    margin: 0 0 40px 0;
+
+    font-size: 21px;
+    line-height: 1.7;
+
+    color: white;
+
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.9);
+}
+
+.home-button {
+    display: inline-block;
+
+    padding: 15px 24px;
+
+    border: 1px solid white;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    transition: background-color 0.2s ease,
+                color 0.2s ease;
+}
+
+.home-button:hover {
+    background-color: white;
+    color: #222;
+}
+
+
+/* =========================================
+   GENERAL HOME SECTIONS
+   ========================================= */
+
+.home-section-inner {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+}
+
+.home-small-title {
+    margin-top: 0;
+    margin-bottom: 25px;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    color: #777;
+}
+
+
+/* =========================================
+   HOME - RESEARCH INTRODUCTION
+   ========================================= */
+
+.home-discovery {
+    padding: 110px 7%;
+}
+
+.home-discovery h2 {
+    max-width: 900px;
+
+    margin-top: 0;
+    margin-bottom: 40px;
+
+    font-size: 48px;
+    line-height: 1.15;
+}
+
+.home-large-text {
+    max-width: 950px;
+
+    margin-bottom: 0;
+
+    font-size: 21px;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   HOME - RESEARCH AFFILIATIONS
+   ========================================= */
+
+.home-affiliations {
+    padding: 110px 7%;
+
+    background-color: #f6f6f6;
+}
+
+.home-affiliations h2 {
+    margin-top: 0;
+    margin-bottom: 60px;
+
+    font-size: 48px;
+}
+
+.affiliation-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    column-gap: 70px;
+}
+
+.affiliation-item {
+    padding: 25px 0;
+
+    border-top: 1px solid #ccc;
+
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+
+/* =========================================
+   HOME - CONTACT
+   ========================================= */
+
+.home-contact {
+    padding: 90px 7%;
+
+    background-color: #222;
+
+    color: white;
+}
+
+.home-contact .home-small-title {
+    color: #aaa;
+}
+
+.home-contact-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 80px;
+}
+
+.home-contact h2 {
+    margin-top: 0;
+
+    font-size: 48px;
+}
+
+.home-contact-details p {
+    margin-top: 0;
+    margin-bottom: 25px;
+
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.home-contact-details a {
+    color: white;
+
+    text-decoration: none;
+
+    border-bottom: 1px solid white;
+}
+
+.home-contact-details a:hover {
+    opacity: 0.7;
+}
+
+
+/* =========================================
+   RESEARCH PAGE
+   ========================================= */
+
+.research-page {
+    width: 100%;
+    max-width: 1250px;
+
+    margin: 0 auto;
+
+    padding: 80px 7%;
+}
+
+
+/* RESEARCH INTRO */
+
+.research-intro {
+    max-width: 1000px;
+
+    margin-bottom: 100px;
+}
+
+.research-intro h1 {
+    margin-top: 0;
+    margin-bottom: 45px;
+
+    font-size: 52px;
+}
+
+.research-intro p {
+    font-size: 19px;
+    line-height: 1.8;
+}
+
+
+/* RESEARCH THEMES */
+
+.research-themes {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    column-gap: 60px;
+    row-gap: 40px;
+}
+
+.research-section-title {
+    grid-column: 1 / -1;
+
+    margin-top: 0;
+    margin-bottom: 20px;
+
+    font-size: 38px;
+}
+
+
+/* INDIVIDUAL RESEARCH THEME */
+
+.research-theme-row {
+    display: flex;
+    flex-direction: column;
+
+    padding: 45px 0 60px;
+
+    border-top: 1px solid #ddd;
+}
+
+
+/* THIRD RESEARCH THEME */
+
+.research-theme-row:last-of-type {
+    grid-column: 1 / -1;
+
+    width: calc(50% - 30px);
+
+    justify-self: center;
+}
+
+
+/* RESEARCH TEXT */
+
+.research-theme-text {
+    max-width: none;
+}
+
+.research-number {
+    margin-top: 0;
+    margin-bottom: 15px;
+
+    color: #888;
+
+    font-size: 16px;
+}
+
+.research-theme-text h2 {
+    margin-top: 0;
+    margin-bottom: 25px;
+
+    font-size: 32px;
+    line-height: 1.25;
+}
+
+.research-theme-text p {
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+
+/* RESEARCH IMAGES */
+
+.research-theme-image {
+    width: 100%;
+
+    margin-top: 25px;
+}
+
+.research-theme-image img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    border-radius: 4px;
+}
+
+
+/* RESEARCH GOAL */
+
+.research-goal {
+    margin-top: 80px;
+
+    padding-top: 50px;
+    padding-bottom: 40px;
+
+    border-top: 2px solid #222;
+}
+
+.research-goal h2 {
+    margin-top: 0;
+    margin-bottom: 25px;
+
+    font-size: 36px;
+}
+
+.research-goal p {
+    max-width: 950px;
+
+    font-size: 19px;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   TEAM PAGES
+   ========================================= */
+
+.team-page {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 80px 7%;
+}
+
+.page-title {
+    margin-top: 0;
+    margin-bottom: 80px;
+
+    font-size: 52px;
+}
+
+.team-category {
+    margin-bottom: 100px;
+}
+
+.category-title {
+    margin-bottom: 45px;
+
+    padding-bottom: 15px;
+
+    border-bottom: 1px solid #ddd;
+
+    font-size: 34px;
+}
+
+
+/* PERSON PROFILE */
+
+.person-profile {
+    display: grid;
+
+    grid-template-columns: 280px 1fr;
+
+    gap: 50px;
+
+    align-items: start;
+
+    margin-bottom: 70px;
+}
+
+.profile-photo {
+    display: block;
+
+    width: 280px;
+    height: 350px;
+
+    object-fit: cover;
+    object-position: center;
+}
+
+.person-info h2 {
+    margin: 0 0 8px 0;
+
+    font-size: 30px;
+}
+
+.person-info h3 {
+    margin: 0 0 25px 0;
+
+    color: #666;
+
+    font-size: 19px;
+    font-weight: normal;
+}
+
+.person-info h4 {
+    margin-top: 30px;
+    margin-bottom: 8px;
+
+    font-size: 18px;
+}
+
+.person-info p {
+    margin-top: 0;
+
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+
+/* TEAM MEMBERS WITHOUT PHOTO */
+
+.person-profile-no-photo {
+    grid-template-columns: 1fr;
+
+    margin-left: 330px;
+}
+
+
+/* =========================================
+   PUBLICATIONS PAGE
+   ========================================= */
+
+.publications-page {
+    width: 100%;
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding: 80px 7%;
+}
+
+.publications-page > h1 {
+    margin-top: 0;
+    margin-bottom: 15px;
+
+    font-size: 52px;
+}
+
+.publications-intro {
+    margin-top: 0;
+    margin-bottom: 70px;
+
+    color: #666;
+
+    font-size: 19px;
+}
+
+
+/* INDIVIDUAL PUBLICATION */
+
+.publication-item {
+    padding: 40px 0;
+
+    border-top: 1px solid #ddd;
+}
+
+.publication-with-image {
+    display: grid;
+
+    grid-template-columns: 280px 1fr;
+
+    gap: 45px;
+
+    align-items: start;
+}
+
+.publication-image img {
+    display: block;
+
+    width: 280px;
+    height: auto;
+}
+
+.publication-year {
+    margin-top: 0;
+
+    color: #777;
+
+    font-size: 16px;
+}
+
+.publication-content h2 {
+    margin: 8px 0 15px;
+
+    font-size: 28px;
+    line-height: 1.35;
+}
+
+.publication-authors {
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+.publication-journal {
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+.publication-item a {
+    color: #222;
+
+    font-weight: bold;
+
+    text-decoration: none;
+
+    border-bottom: 1px solid #222;
+
+    padding-bottom: 3px;
+}
+
+.publication-item a:hover {
+    color: #777;
+
+    border-bottom-color: #777;
+}
+
+
+/* GOOGLE SCHOLAR */
+
+.all-publications {
+    margin-top: 80px;
+
+    padding-top: 40px;
+
+    border-top: 2px solid #222;
+}
+
+.all-publications h2 {
+    font-size: 30px;
+}
+
+.all-publications p {
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.scholar-button {
+    display: inline-block;
+
+    margin-top: 15px;
+
+    padding: 14px 22px;
+
+    border: 1px solid #222;
+
+    color: #222;
+
+    text-decoration: none;
+
+    font-weight: bold;
+}
+
+.scholar-button:hover {
+    background-color: #222;
+
+    color: white;
+}
+
+
+/* =========================================
+   NEWS PAGE
+   ========================================= */
+
+.news-page {
+    width: 100%;
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding: 80px 7%;
+}
+
+.news-page > h1 {
+    margin-top: 0;
+    margin-bottom: 70px;
+
+    font-size: 52px;
+}
+
+.news-year {
+    margin-top: 60px;
+    margin-bottom: 30px;
+
+    font-size: 36px;
+}
+
+.news-item {
+    margin-bottom: 90px;
+
+    padding-top: 40px;
+
+    border-top: 1px solid #ddd;
+}
+
+.news-item h2 {
+    margin-top: 0;
+    margin-bottom: 30px;
+
+    font-size: 34px;
+    line-height: 1.25;
+}
+
+.news-item h3 {
+    margin-top: 35px;
+
+    font-size: 23px;
+}
+
+.news-item p {
+    font-size: 18px;
+    line-height: 1.75;
+}
+
+.news-source {
+    margin-top: 35px;
+}
+
+.news-source a {
+    color: #222;
+
+    font-size: 17px;
+    font-weight: bold;
+
+    text-decoration: none;
+
+    border-bottom: 1px solid #222;
+
+    padding-bottom: 3px;
+}
+
+.news-source a:hover {
+    color: #777;
+
+    border-bottom-color: #777;
+}
+
+
+/* =========================================
+   JOIN OUR TEAM PAGE
+   ========================================= */
+
+.join-page {
+    width: 100%;
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding: 80px 7%;
+}
+
+.join-page > h1 {
+    margin-top: 0;
+    margin-bottom: 70px;
+
+    font-size: 52px;
+}
+
+.join-page h2 {
+    margin-bottom: 30px;
+
+    font-size: 34px;
+}
+
+.join-page p {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.join-page a {
+    color: #222;
+
+    font-weight: bold;
+
+    text-decoration: none;
+
+    border-bottom: 1px solid #222;
+}
+
+.join-page a:hover {
+    color: #777;
+
+    border-bottom-color: #777;
+}
+
+
+/* =========================================
+   LAB LIFE
+   CURRENTLY HIDDEN FROM NAVIGATION
+   KEEPING CSS FOR FUTURE USE
+   ========================================= */
+
+.lab-life-page {
+    width: 100%;
+    max-width: 1250px;
+
+    margin: 0 auto;
+
+    padding: 80px 7% 120px;
+}
+
+.lab-life-intro {
+    max-width: 1000px;
+
+    margin-bottom: 70px;
+}
+
+.lab-life-intro h1 {
+    margin-top: 0;
+    margin-bottom: 45px;
+
+    font-size: 52px;
+}
+
+.lab-life-intro p {
+    font-size: 19px;
+    line-height: 1.8;
+}
+
+.lab-life-gallery {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+.gallery-photo {
+    display: block;
+
+    width: 100%;
+    height: 380px;
+
+    object-fit: cover;
+}
+
+.gallery-photo-large {
+    grid-column: 1 / -1;
+
+    height: 600px;
+}
+
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+footer {
+    width: 100%;
+
+    padding: 25px 7%;
+
+    border-top: 1px solid #eee;
+
+    font-size: 14px;
+}
+
+footer p {
+    margin: 0;
+}
+
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 1100px) {
+
+    .site-header {
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+
+    .lab-logo {
+        width: 165px;
+        height: 90px;
+    }
+
+    .site-header nav {
+        gap: 22px;
+    }
+
+    .site-header nav > a,
+    .site-header .dropbtn {
+        font-size: 16px;
+    }
+
+    .home-hero-content h1 {
+        font-size: 54px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 800px) {
+
+    /* HEADER */
+
+    .site-header {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        min-height: auto;
+
+        gap: 15px;
+
+        padding: 15px 7% 20px;
+    }
+
+    .lab-logo {
+        width: 150px;
+        height: 80px;
+    }
+
+    .site-header nav {
+        width: 100%;
+
+        justify-content: flex-start;
+
+        flex-wrap: wrap;
+
+        gap: 8px 20px;
+
+        margin-left: 0;
+    }
+
+    .site-header nav > a,
+    .site-header .dropbtn {
+        font-size: 15px;
+
+        line-height: 2;
+    }
+
+    .site-header .x-link {
+        margin-left: 0;
+
+        font-size: 20px;
+    }
+
+    .dropdown-content {
+        min-width: 220px;
+    }
+
+
+    /* HOME HERO */
+
+    .home-hero {
+        min-height: 550px;
+
+        background-position: center;
+    }
+
+    .home-hero-content {
+        width: 86%;
+
+        padding: 70px 0;
+    }
+
+    .home-hero-content h1 {
+        font-size: 42px;
+        line-height: 1.12;
+    }
+
+    .home-hero-content p {
+        font-size: 18px;
+    }
+
+
+    /* HOME SECTIONS */
+
+    .home-discovery,
+    .home-affiliations {
+        padding-top: 75px;
+        padding-bottom: 75px;
+    }
+
+    .home-discovery h2,
+    .home-affiliations h2 {
+        font-size: 36px;
+    }
+
+    .home-large-text {
+        font-size: 18px;
+    }
+
+    .affiliation-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .home-contact {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+
+    .home-contact-grid {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+    }
+
+    .home-contact h2 {
+        font-size: 36px;
+    }
+
+
+    /* RESEARCH */
+
+    .research-page {
+        padding-top: 50px;
+    }
+
+    .research-intro {
+        margin-bottom: 60px;
+    }
+
+    .research-intro h1 {
+        font-size: 42px;
+    }
+
+    .research-intro p {
+        font-size: 17px;
+    }
+
+    .research-section-title {
+        font-size: 32px;
+    }
+
+    .research-themes {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+    .research-theme-row,
+    .research-theme-row:last-of-type {
+        grid-column: 1;
+
+        width: 100%;
+
+        padding: 40px 0;
+    }
+
+    .research-theme-text h2 {
+        font-size: 28px;
+    }
+
+    .research-theme-text p {
+        font-size: 17px;
+    }
+
+    .research-goal h2 {
+        font-size: 30px;
+    }
+
+    .research-goal p {
+        font-size: 17px;
+    }
+
+
+    /* TEAM */
+
+    .team-page {
+        padding-top: 50px;
+    }
+
+    .page-title {
+        margin-bottom: 50px;
+
+        font-size: 42px;
+    }
+
+    .person-profile {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+    }
+
+    .person-profile-no-photo {
+        margin-left: 0;
+    }
+
+    .profile-photo {
+        width: 100%;
+        max-width: 350px;
+
+        height: auto;
+    }
+
+
+    /* PUBLICATIONS */
+
+    .publications-page {
+        padding-top: 50px;
+    }
+
+    .publications-page > h1 {
+        font-size: 42px;
+    }
+
+    .publication-with-image {
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+    }
+
+    .publication-image img {
+        width: 100%;
+        max-width: 450px;
+
+        height: auto;
+    }
+
+    .publication-content h2 {
+        font-size: 25px;
+    }
+
+
+    /* NEWS */
+
+    .news-page {
+        padding-top: 50px;
+    }
+
+    .news-page > h1 {
+        font-size: 42px;
+    }
+
+    .news-year {
+        font-size: 30px;
+    }
+
+    .news-item h2 {
+        font-size: 28px;
+    }
+
+
+    /* JOIN */
+
+    .join-page {
+        padding-top: 50px;
+    }
+
+    .join-page > h1 {
+        font-size: 42px;
+    }
+
+    .join-page h2 {
+        font-size: 28px;
+    }
+
+
+    /* LAB LIFE - FOR FUTURE USE */
+
+    .lab-life-page {
+        padding-top: 50px;
+    }
+
+    .lab-life-intro h1 {
+        font-size: 42px;
+    }
+
+    .lab-life-intro p {
+        font-size: 17px;
+    }
+
+    .lab-life-gallery {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+    }
+
+    .gallery-photo,
+    .gallery-photo-large {
+        grid-column: 1;
+
+        width: 100%;
+        height: auto;
+    }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+   ========================================= */
+
+@media (max-width: 500px) {
+
+    .lab-logo {
+        width: 135px;
+        height: 70px;
+    }
+
+    .home-hero {
+        min-height: 500px;
+    }
+
+    .home-hero-content h1 {
+        font-size: 34px;
+    }
+
+    .home-hero-content p {
+        font-size: 17px;
+    }
+
+    .home-discovery h2,
+    .home-affiliations h2,
+    .home-contact h2 {
+        font-size: 32px;
+    }
+
+}
