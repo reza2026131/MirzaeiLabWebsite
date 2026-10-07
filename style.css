@@ -1331,3 +1331,245 @@ footer p {
     }
 
 }
+
+
+/* =========================================
+   NEW FULL-SCREEN HOMEPAGE
+   ========================================= */
+
+.mainpage-hero {
+    width: 100%;
+    min-height: 100vh;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.15),
+            rgba(0, 0, 0, 0.15)
+        ),
+        url("assets/mainpage.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    position: relative;
+}
+
+
+.mainpage-overlay {
+    min-height: 100vh;
+
+    padding: 32px 3% 40px;
+
+    display: flex;
+    flex-direction: column;
+
+    color: white;
+}
+
+
+/* TOP */
+
+.mainpage-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+
+.mainpage-title {
+    color: white;
+    text-decoration: none;
+
+    font-size: 38px;
+    font-weight: 400;
+
+    white-space: nowrap;
+
+    text-shadow:
+        0 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+
+/* NAVIGATION */
+
+.mainpage-nav {
+    display: flex;
+    align-items: center;
+
+    gap: 32px;
+}
+
+
+.mainpage-nav > a,
+.mainpage-nav .dropbtn {
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    text-shadow:
+        0 1px 5px rgba(0, 0, 0, 0.9);
+}
+
+
+.mainpage-nav > a:hover,
+.mainpage-nav .dropbtn:hover {
+    opacity: 0.7;
+}
+
+
+/* BUTTONS */
+
+.mainpage-actions {
+    display: flex;
+    align-items: center;
+
+    gap: 16px;
+
+    margin-top: 25px;
+}
+
+
+.mainpage-button {
+    display: inline-block;
+
+    padding: 13px 21px;
+
+    background: white;
+    color: #222;
+
+    border-radius: 3px;
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+}
+
+
+.mainpage-button:hover {
+    background: #222;
+    color: white;
+}
+
+
+.mainpage-social {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: white;
+    color: #222;
+
+    text-decoration: none;
+
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+.mainpage-social:hover {
+    opacity: 0.8;
+}
+
+
+/* BOTTOM RESEARCH STATEMENT */
+
+.mainpage-tagline {
+    margin-top: auto;
+
+    max-width: 720px;
+
+    color: white;
+
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.5;
+
+    text-shadow:
+        0 2px 7px rgba(0, 0, 0, 0.9);
+}
+
+
+/* =========================================
+   HOMEPAGE MOBILE
+   ========================================= */
+
+@media (max-width: 900px) {
+
+    .mainpage-overlay {
+        padding: 25px 7% 35px;
+    }
+
+
+    .mainpage-top {
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 20px;
+    }
+
+
+    .mainpage-title {
+        font-size: 32px;
+    }
+
+
+    .mainpage-nav {
+        flex-wrap: wrap;
+
+        gap: 8px 20px;
+    }
+
+
+    .mainpage-nav > a,
+    .mainpage-nav .dropbtn {
+        font-size: 15px;
+    }
+
+
+    .mainpage-tagline {
+        font-size: 17px;
+
+        max-width: 600px;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .mainpage-title {
+        font-size: 28px;
+    }
+
+
+    .mainpage-nav {
+        gap: 5px 15px;
+    }
+
+
+    .mainpage-nav > a,
+    .mainpage-nav .dropbtn {
+        font-size: 14px;
+    }
+
+
+    .mainpage-tagline {
+        font-size: 16px;
+    }
+
+}
