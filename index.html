@@ -24,7 +24,6 @@
             min-height: 650px;
             overflow: hidden;
 
-            /* Override old static background */
             background-image: none;
             background-color: #111;
         }
@@ -57,7 +56,7 @@
         }
 
         /* =========================================
-           IMAGE 1: HOME2
+           IMAGE 1: HOME2_EDITED
            Displayed first
            ========================================= */
 
@@ -67,7 +66,7 @@
                     rgba(0, 0, 0, 0.18),
                     rgba(0, 0, 0, 0.18)
                 ),
-                url("assets/home2.jpg");
+                url("assets/home2_edited.jpg");
 
             animation-delay: 0s;
         }
@@ -90,11 +89,6 @@
 
         /* =========================================
            SMOOTH FADE ANIMATION
-
-           Each image:
-           - Remains visible for approximately 4 seconds
-           - Fades during approximately 1 second
-           - Repeats every 10 seconds
            ========================================= */
 
         @keyframes homepageSlideshow {
@@ -133,8 +127,6 @@
             height: 100%;
             min-height: 650px;
         }
-
-        /* Ensure navigation stays visible */
 
         .mainpage-top,
         .mainpage-actions,
@@ -209,13 +201,11 @@
 <section class="mainpage-hero">
 
 
-    <!-- =========================================
-         AUTOMATIC BACKGROUND SLIDESHOW
-         ========================================= -->
+    <!-- AUTOMATIC BACKGROUND SLIDESHOW -->
 
     <div class="mainpage-slideshow" aria-hidden="true">
 
-        <!-- FIRST IMAGE: home2.jpg -->
+        <!-- FIRST IMAGE: home2_edited.jpg -->
         <div class="mainpage-slide mainpage-slide-one"></div>
 
         <!-- SECOND IMAGE: home1.png -->
@@ -225,16 +215,12 @@
 
 
 
-    <!-- =========================================
-         HOMEPAGE CONTENT OVER IMAGES
-         ========================================= -->
+    <!-- HOMEPAGE CONTENT OVER IMAGES -->
 
     <div class="mainpage-overlay">
 
 
-        <!-- =========================================
-             TOP AREA
-             ========================================= -->
+        <!-- TOP AREA -->
 
         <div class="mainpage-top">
 
@@ -304,9 +290,7 @@
 
 
 
-        <!-- =========================================
-             BUTTONS
-             ========================================= -->
+        <!-- BUTTONS -->
 
         <div class="mainpage-actions">
 
@@ -334,9 +318,7 @@
 
 
 
-        <!-- =========================================
-             BOTTOM RESEARCH STATEMENT
-             ========================================= -->
+        <!-- BOTTOM RESEARCH STATEMENT -->
 
         <div class="mainpage-tagline">
 
