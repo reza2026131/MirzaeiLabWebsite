@@ -7,7 +7,196 @@
 
     <title>Mirzaei Lab | University of Alberta</title>
 
-    <link rel="stylesheet" href="style.css">
+    <!-- Existing website CSS -->
+    <link rel="stylesheet" href="style.css?v=3">
+
+    <!-- Homepage slideshow CSS -->
+    <style>
+
+        /* =========================================
+           AUTOMATIC HOMEPAGE SLIDESHOW
+           ========================================= */
+
+        .mainpage-hero {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            min-height: 650px;
+            overflow: hidden;
+
+            /* Override old static background */
+            background-image: none;
+            background-color: #111;
+        }
+
+        /* Container for both images */
+
+        .mainpage-slideshow {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        /* Shared image settings */
+
+        .mainpage-slide {
+            position: absolute;
+            inset: 0;
+
+            width: 100%;
+            height: 100%;
+
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+
+            opacity: 0;
+
+            animation: homepageSlideshow 10s linear infinite;
+        }
+
+        /* =========================================
+           IMAGE 1: HOME2
+           Displayed first
+           ========================================= */
+
+        .mainpage-slide-one {
+            background-image:
+                linear-gradient(
+                    rgba(0, 0, 0, 0.18),
+                    rgba(0, 0, 0, 0.18)
+                ),
+                url("assets/home2.jpg");
+
+            animation-delay: 0s;
+        }
+
+        /* =========================================
+           IMAGE 2: HOME1
+           Displayed second
+           ========================================= */
+
+        .mainpage-slide-two {
+            background-image:
+                linear-gradient(
+                    rgba(0, 0, 0, 0.18),
+                    rgba(0, 0, 0, 0.18)
+                ),
+                url("assets/home1.png");
+
+            animation-delay: -5s;
+        }
+
+        /* =========================================
+           SMOOTH FADE ANIMATION
+
+           Each image:
+           - Remains visible for approximately 4 seconds
+           - Fades during approximately 1 second
+           - Repeats every 10 seconds
+           ========================================= */
+
+        @keyframes homepageSlideshow {
+
+            0% {
+                opacity: 1;
+            }
+
+            40% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0;
+            }
+
+            90% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+
+        }
+
+        /* =========================================
+           KEEP TEXT ABOVE SLIDESHOW
+           ========================================= */
+
+        .mainpage-overlay {
+            position: relative;
+            z-index: 2;
+
+            width: 100%;
+            height: 100%;
+            min-height: 650px;
+        }
+
+        /* Ensure navigation stays visible */
+
+        .mainpage-top,
+        .mainpage-actions,
+        .mainpage-tagline {
+            position: relative;
+            z-index: 3;
+        }
+
+        /* =========================================
+           MOBILE
+           ========================================= */
+
+        @media (max-width: 900px) {
+
+            .mainpage-hero {
+                min-height: 600px;
+            }
+
+            .mainpage-overlay {
+                min-height: 600px;
+            }
+
+            .mainpage-slide {
+                background-position: center center;
+            }
+
+        }
+
+        @media (max-width: 500px) {
+
+            .mainpage-hero {
+                min-height: 550px;
+            }
+
+            .mainpage-overlay {
+                min-height: 550px;
+            }
+
+        }
+
+        /* =========================================
+           ACCESSIBILITY
+           ========================================= */
+
+        @media (prefers-reduced-motion: reduce) {
+
+            .mainpage-slide {
+                animation: none;
+            }
+
+            .mainpage-slide-one {
+                opacity: 1;
+            }
+
+            .mainpage-slide-two {
+                opacity: 0;
+            }
+
+        }
+
+    </style>
+
 </head>
 
 <body>
@@ -18,6 +207,27 @@
      ========================================= -->
 
 <section class="mainpage-hero">
+
+
+    <!-- =========================================
+         AUTOMATIC BACKGROUND SLIDESHOW
+         ========================================= -->
+
+    <div class="mainpage-slideshow" aria-hidden="true">
+
+        <!-- FIRST IMAGE: home2.jpg -->
+        <div class="mainpage-slide mainpage-slide-one"></div>
+
+        <!-- SECOND IMAGE: home1.png -->
+        <div class="mainpage-slide mainpage-slide-two"></div>
+
+    </div>
+
+
+
+    <!-- =========================================
+         HOMEPAGE CONTENT OVER IMAGES
+         ========================================= -->
 
     <div class="mainpage-overlay">
 
