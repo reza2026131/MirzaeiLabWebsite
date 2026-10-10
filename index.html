@@ -15,6 +15,7 @@
 
         /* =========================================
            AUTOMATIC HOMEPAGE SLIDESHOW
+           THREE IMAGES - 15 SECOND CYCLE
            ========================================= */
 
         .mainpage-hero {
@@ -28,7 +29,7 @@
             background-color: #111;
         }
 
-        /* Container for both images */
+        /* Container for all three images */
 
         .mainpage-slideshow {
             position: absolute;
@@ -52,7 +53,9 @@
 
             opacity: 0;
 
-            animation: homepageSlideshow 10s linear infinite;
+            animation-duration: 15s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
         }
 
         /* =========================================
@@ -68,7 +71,7 @@
                 ),
                 url("assets/home2_edited.jpg");
 
-            animation-delay: 0s;
+            animation-name: showFirst;
         }
 
         /* =========================================
@@ -84,33 +87,108 @@
                 ),
                 url("assets/home1.png");
 
-            animation-delay: -5s;
+            animation-name: showSecond;
         }
 
         /* =========================================
-           SMOOTH FADE ANIMATION
+           IMAGE 3: HOME_3
+           Displayed third
            ========================================= */
 
-        @keyframes homepageSlideshow {
+        .mainpage-slide-three {
+            background-image:
+                linear-gradient(
+                    rgba(0, 0, 0, 0.18),
+                    rgba(0, 0, 0, 0.18)
+                ),
+                url("assets/home_3.jpg");
+
+            animation-name: showThird;
+        }
+
+        /* =========================================
+           SMOOTH FADE ANIMATIONS
+
+           Image 1: 0–5 seconds
+           Image 2: 5–10 seconds
+           Image 3: 10–15 seconds
+
+           Each transition takes approximately
+           1 second.
+           ========================================= */
+
+        @keyframes showFirst {
 
             0% {
                 opacity: 1;
             }
 
-            40% {
+            26.6667% {
                 opacity: 1;
             }
 
-            50% {
+            33.3333% {
                 opacity: 0;
             }
 
-            90% {
+            93.3333% {
                 opacity: 0;
             }
 
             100% {
                 opacity: 1;
+            }
+
+        }
+
+        @keyframes showSecond {
+
+            0% {
+                opacity: 0;
+            }
+
+            26.6667% {
+                opacity: 0;
+            }
+
+            33.3333% {
+                opacity: 1;
+            }
+
+            60% {
+                opacity: 1;
+            }
+
+            66.6667% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 0;
+            }
+
+        }
+
+        @keyframes showThird {
+
+            0% {
+                opacity: 0;
+            }
+
+            60% {
+                opacity: 0;
+            }
+
+            66.6667% {
+                opacity: 1;
+            }
+
+            93.3333% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
             }
 
         }
@@ -181,7 +259,8 @@
                 opacity: 1;
             }
 
-            .mainpage-slide-two {
+            .mainpage-slide-two,
+            .mainpage-slide-three {
                 opacity: 0;
             }
 
@@ -201,7 +280,9 @@
 <section class="mainpage-hero">
 
 
-    <!-- AUTOMATIC BACKGROUND SLIDESHOW -->
+    <!-- =========================================
+         AUTOMATIC BACKGROUND SLIDESHOW
+         ========================================= -->
 
     <div class="mainpage-slideshow" aria-hidden="true">
 
@@ -211,16 +292,23 @@
         <!-- SECOND IMAGE: home1.png -->
         <div class="mainpage-slide mainpage-slide-two"></div>
 
+        <!-- THIRD IMAGE: home_3.jpg -->
+        <div class="mainpage-slide mainpage-slide-three"></div>
+
     </div>
 
 
 
-    <!-- HOMEPAGE CONTENT OVER IMAGES -->
+    <!-- =========================================
+         HOMEPAGE CONTENT OVER IMAGES
+         ========================================= -->
 
     <div class="mainpage-overlay">
 
 
-        <!-- TOP AREA -->
+        <!-- =========================================
+             TOP AREA
+             ========================================= -->
 
         <div class="mainpage-top">
 
@@ -290,7 +378,9 @@
 
 
 
-        <!-- BUTTONS -->
+        <!-- =========================================
+             BUTTONS
+             ========================================= -->
 
         <div class="mainpage-actions">
 
@@ -318,7 +408,9 @@
 
 
 
-        <!-- BOTTOM RESEARCH STATEMENT -->
+        <!-- =========================================
+             BOTTOM RESEARCH STATEMENT
+             ========================================= -->
 
         <div class="mainpage-tagline">
 
