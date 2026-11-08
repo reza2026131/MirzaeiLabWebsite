@@ -7,16 +7,10 @@
 
     <title>Mirzaei Lab | University of Alberta</title>
 
-    <!-- Existing website CSS -->
-    <link rel="stylesheet" href="style.css?v=4">
+    <link rel="stylesheet" href="style.css?v=5">
 
-    <!-- Homepage slideshow CSS -->
     <style>
-
-        /* =========================================
-           AUTOMATIC HOMEPAGE SLIDESHOW
-           THREE IMAGES - 15 SECOND CYCLE
-           ========================================= */
+        /* AUTOMATIC HOMEPAGE SLIDESHOW */
 
         .mainpage-hero {
             position: relative;
@@ -24,12 +18,9 @@
             height: 100vh;
             min-height: 650px;
             overflow: hidden;
-
             background-image: none;
             background-color: #111;
         }
-
-        /* Container for all three images */
 
         .mainpage-slideshow {
             position: absolute;
@@ -38,30 +29,19 @@
             pointer-events: none;
         }
 
-        /* Shared image settings */
-
         .mainpage-slide {
             position: absolute;
             inset: 0;
-
             width: 100%;
             height: 100%;
-
             background-size: cover;
             background-position: center center;
             background-repeat: no-repeat;
-
             opacity: 0;
-
             animation-duration: 15s;
             animation-timing-function: linear;
             animation-iteration-count: infinite;
         }
-
-        /* =========================================
-           IMAGE 1: HOME2_EDITED
-           Displayed first
-           ========================================= */
 
         .mainpage-slide-one {
             background-image:
@@ -74,11 +54,6 @@
             animation-name: showFirst;
         }
 
-        /* =========================================
-           IMAGE 2: HOME1
-           Displayed second
-           ========================================= */
-
         .mainpage-slide-two {
             background-image:
                 linear-gradient(
@@ -89,11 +64,6 @@
 
             animation-name: showSecond;
         }
-
-        /* =========================================
-           IMAGE 3: HOME_3
-           Displayed third
-           ========================================= */
 
         .mainpage-slide-three {
             background-image:
@@ -106,19 +76,7 @@
             animation-name: showThird;
         }
 
-        /* =========================================
-           SMOOTH FADE ANIMATIONS
-
-           Image 1: 0–5 seconds
-           Image 2: 5–10 seconds
-           Image 3: 10–15 seconds
-
-           Each transition takes approximately
-           1 second.
-           ========================================= */
-
         @keyframes showFirst {
-
             0% {
                 opacity: 1;
             }
@@ -138,11 +96,9 @@
             100% {
                 opacity: 1;
             }
-
         }
 
         @keyframes showSecond {
-
             0% {
                 opacity: 0;
             }
@@ -166,11 +122,9 @@
             100% {
                 opacity: 0;
             }
-
         }
 
         @keyframes showThird {
-
             0% {
                 opacity: 0;
             }
@@ -190,17 +144,11 @@
             100% {
                 opacity: 0;
             }
-
         }
-
-        /* =========================================
-           KEEP TEXT ABOVE SLIDESHOW
-           ========================================= */
 
         .mainpage-overlay {
             position: relative;
             z-index: 2;
-
             width: 100%;
             height: 100%;
             min-height: 650px;
@@ -213,12 +161,7 @@
             z-index: 3;
         }
 
-        /* =========================================
-           MOBILE
-           ========================================= */
-
         @media (max-width: 900px) {
-
             .mainpage-hero {
                 min-height: 600px;
             }
@@ -230,11 +173,9 @@
             .mainpage-slide {
                 background-position: center center;
             }
-
         }
 
         @media (max-width: 500px) {
-
             .mainpage-hero {
                 min-height: 550px;
             }
@@ -242,15 +183,9 @@
             .mainpage-overlay {
                 min-height: 550px;
             }
-
         }
 
-        /* =========================================
-           ACCESSIBILITY
-           ========================================= */
-
         @media (prefers-reduced-motion: reduce) {
-
             .mainpage-slide {
                 animation: none;
             }
@@ -263,337 +198,236 @@
             .mainpage-slide-three {
                 opacity: 0;
             }
-
         }
-
     </style>
-
 </head>
 
 <body>
 
+    <!-- FULL-SCREEN HOMEPAGE -->
 
-<!-- =========================================
-     FULL-SCREEN HOMEPAGE
-     ========================================= -->
+    <section class="mainpage-hero">
 
-<section class="mainpage-hero">
+        <!-- AUTOMATIC BACKGROUND SLIDESHOW -->
 
+        <div class="mainpage-slideshow" aria-hidden="true">
+            <div class="mainpage-slide mainpage-slide-one"></div>
+            <div class="mainpage-slide mainpage-slide-two"></div>
+            <div class="mainpage-slide mainpage-slide-three"></div>
+        </div>
 
-    <!-- =========================================
-         AUTOMATIC BACKGROUND SLIDESHOW
-         ========================================= -->
+        <!-- HOMEPAGE CONTENT -->
 
-    <div class="mainpage-slideshow" aria-hidden="true">
+        <div class="mainpage-overlay">
 
-        <!-- FIRST IMAGE: home2_edited.jpg -->
-        <div class="mainpage-slide mainpage-slide-one"></div>
+            <div class="mainpage-top">
 
-        <!-- SECOND IMAGE: home1.png -->
-        <div class="mainpage-slide mainpage-slide-two"></div>
-
-        <!-- THIRD IMAGE: home_3.jpg -->
-        <div class="mainpage-slide mainpage-slide-three"></div>
-
-    </div>
-
-
-
-    <!-- =========================================
-         HOMEPAGE CONTENT OVER IMAGES
-         ========================================= -->
-
-    <div class="mainpage-overlay">
-
-
-        <!-- =========================================
-             TOP AREA
-             ========================================= -->
-
-        <div class="mainpage-top">
-
-
-            <!-- MIRZAEI LAB -->
-
-            <a href="index.html" class="mainpage-title">
-                Mirzaei Lab
-            </a>
-
-
-            <!-- NAVIGATION -->
-
-            <nav class="mainpage-nav">
-
-
-                <a href="research/index.html">
-                    Research
+                <a href="index.html" class="mainpage-title">
+                    Mirzaei Lab
                 </a>
 
+                <nav class="mainpage-nav">
 
-                <!-- TEAM DROPDOWN -->
-
-                <div class="dropdown">
-
-                    <a href="team/pi.html" class="dropbtn">
-                        Team
+                    <a href="research/index.html">
+                        Research
                     </a>
 
-                    <div class="dropdown-content">
+                    <!-- NATIVE TEAM DROPDOWN -->
 
-                        <a href="team/pi.html">
-                            Principal Investigator
-                        </a>
+                    <details class="dropdown">
 
-                        <a href="team/members.html">
-                            Current Lab Members
-                        </a>
+                        <summary class="dropbtn">
+                            Team
+                        </summary>
 
-                        <a href="team/alumni.html">
-                            Alumni
-                        </a>
+                        <div class="dropdown-content">
 
-                    </div>
+                            <a href="team/pi.html">
+                                Principal Investigator
+                            </a>
+
+                            <a href="team/members.html">
+                                Current Lab Members
+                            </a>
+
+                            <a href="team/alumni.html">
+                                Alumni
+                            </a>
+
+                        </div>
+
+                    </details>
+
+                    <a href="publications/index.html">
+                        Publications
+                    </a>
+
+                    <a href="news/index.html">
+                        News
+                    </a>
+
+                    <a href="join/index.html">
+                        Join Our Team
+                    </a>
+
+                </nav>
+
+            </div>
+
+            <!-- BUTTONS -->
+
+            <div class="mainpage-actions">
+
+                <a
+                    href="research/index.html"
+                    class="mainpage-button"
+                >
+                    Explore Our Research
+                </a>
+
+                <a
+                    href="https://x.com/RzMirzaei"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="mainpage-social"
+                    aria-label="Mirzaei Lab on X"
+                >
+                    X
+                </a>
+
+            </div>
+
+            <!-- RESEARCH STATEMENT -->
+
+            <div class="mainpage-tagline">
+                Decoding Tumor&ndash;Immune Interactions
+                to Overcome Cancer Therapy Resistance
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- OUR RESEARCH -->
+
+    <section class="home-discovery">
+
+        <div class="home-section-inner">
+
+            <p class="home-small-title">
+                OUR RESEARCH
+            </p>
+
+            <h2>
+                From Discovery to New Therapeutic Strategies
+            </h2>
+
+            <p class="home-large-text">
+                Our research focuses on understanding the complex interactions
+                between cancer cells and the tumor microenvironment that shape
+                tumor progression and therapeutic response. By integrating
+                CRISPR-based functional genomics with experimental models and
+                high-resolution single-cell and spatial profiling, we aim to
+                identify tumor-intrinsic mechanisms that regulate anti-tumor
+                immunity, tumor&ndash;immune interactions, and resistance to
+                cancer therapy.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- RESEARCH AFFILIATIONS -->
+
+    <section class="home-affiliations">
+
+        <div class="home-section-inner">
+
+            <p class="home-small-title">
+                RESEARCH AFFILIATIONS
+            </p>
+
+            <h2>
+                Research Affiliations
+            </h2>
+
+            <div class="affiliation-grid">
+
+                <div class="affiliation-item">
+                    University of Alberta
+                </div>
+
+                <div class="affiliation-item">
+                    Department of Oncology
+                </div>
+
+                <div class="affiliation-item">
+                    Department of Medical Microbiology &amp; Immunology
+                </div>
+
+                <div class="affiliation-item">
+                    Cross Cancer Institute
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- CONTACT -->
+
+    <section class="home-contact">
+
+        <div class="home-section-inner">
+
+            <div class="home-contact-grid">
+
+                <div>
+
+                    <p class="home-small-title">
+                        CONTACT
+                    </p>
+
+                    <h2>
+                        Mirzaei Lab
+                    </h2>
 
                 </div>
 
+                <div class="home-contact-details">
 
-                <a href="publications/index.html">
-                    Publications
-                </a>
+                    <p>
+                        Cross Cancer Institute<br>
+                        University of Alberta<br>
+                        Edmonton, Alberta<br>
+                        Canada
+                    </p>
 
+                    <p>
+                        Email:
 
-                <a href="news/index.html">
-                    News
-                </a>
+                        <a href="mailto:rmirzaei@ualberta.ca">
+                            rmirzaei@ualberta.ca
+                        </a>
+                    </p>
 
+                </div>
 
-                <a href="join/index.html">
-                    Join Our Team
-                </a>
-
-
-            </nav>
-
-        </div>
-
-
-
-        <!-- =========================================
-             BUTTONS
-             ========================================= -->
-
-        <div class="mainpage-actions">
-
-
-            <a
-                href="research/index.html"
-                class="mainpage-button"
-            >
-                Explore Our Research
-            </a>
-
-
-            <a
-                href="https://x.com/RzMirzaei"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="mainpage-social"
-                aria-label="Mirzaei Lab on X"
-            >
-                X
-            </a>
-
+            </div>
 
         </div>
 
+    </section>
 
+    <!-- FOOTER -->
 
-        <!-- =========================================
-             BOTTOM RESEARCH STATEMENT
-             ========================================= -->
-
-        <div class="mainpage-tagline">
-
-            Decoding Tumor&ndash;Immune Interactions
-            to Overcome Cancer Therapy Resistance
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================================
-     OUR RESEARCH
-     ========================================= -->
-
-<section class="home-discovery">
-
-    <div class="home-section-inner">
-
-
-        <p class="home-small-title">
-            OUR RESEARCH
+    <footer>
+        <p>
+            &copy; 2026 Mirzaei Lab
         </p>
+    </footer>
 
-
-        <h2>
-            From Discovery to New Therapeutic Strategies
-        </h2>
-
-
-        <p class="home-large-text">
-
-            Our research focuses on understanding the complex interactions
-            between cancer cells and the tumor microenvironment that shape
-            tumor progression and therapeutic response. By integrating
-            CRISPR-based functional genomics with experimental models and
-            high-resolution single-cell and spatial profiling, we aim to
-            identify tumor-intrinsic mechanisms that regulate anti-tumor
-            immunity, tumor&ndash;immune interactions, and resistance to
-            cancer therapy.
-
-        </p>
-
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================================
-     RESEARCH AFFILIATIONS
-     ========================================= -->
-
-<section class="home-affiliations">
-
-    <div class="home-section-inner">
-
-
-        <p class="home-small-title">
-            RESEARCH AFFILIATIONS
-        </p>
-
-
-        <h2>
-            Research Affiliations
-        </h2>
-
-
-        <div class="affiliation-grid">
-
-
-            <div class="affiliation-item">
-                University of Alberta
-            </div>
-
-
-            <div class="affiliation-item">
-                Department of Oncology
-            </div>
-
-
-            <div class="affiliation-item">
-                Department of Medical Microbiology &amp; Immunology
-            </div>
-
-
-            <div class="affiliation-item">
-                Cross Cancer Institute
-            </div>
-
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================================
-     CONTACT
-     ========================================= -->
-
-<section class="home-contact">
-
-    <div class="home-section-inner">
-
-
-        <div class="home-contact-grid">
-
-
-            <!-- LEFT SIDE -->
-
-            <div>
-
-                <p class="home-small-title">
-                    CONTACT
-                </p>
-
-
-                <h2>
-                    Mirzaei Lab
-                </h2>
-
-            </div>
-
-
-            <!-- RIGHT SIDE -->
-
-            <div class="home-contact-details">
-
-
-                <p>
-                    Cross Cancer Institute<br>
-                    University of Alberta<br>
-                    Edmonton, Alberta<br>
-                    Canada
-                </p>
-
-
-                <p>
-
-                    Email:
-
-                    <a href="mailto:rmirzaei@ualberta.ca">
-                        rmirzaei@ualberta.ca
-                    </a>
-
-                </p>
-
-
-            </div>
-
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================================
-     FOOTER
-     ========================================= -->
-
-<footer>
-
-    <p>
-        &copy; 2026 Mirzaei Lab
-    </p>
-
-</footer>
-
-
-    <script src="/navigation.js?v=1" defer></script>
-  </body>
+</body>
 
 </html>
