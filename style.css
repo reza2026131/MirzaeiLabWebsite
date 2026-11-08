@@ -146,7 +146,8 @@ body {
 }
 
 .dropdown:hover .dropdown-content,
-.dropdown:focus-within .dropdown-content {
+.dropdown:focus-within .dropdown-content,
+.dropdown.is-open .dropdown-content {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
