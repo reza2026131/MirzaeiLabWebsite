@@ -98,16 +98,36 @@ body {
     display: inline-block;
 }
 
-.dropdown-content {
-    display: none;
+/*
+   Keep the dropdown active while the pointer travels from the Team link
+   to the menu. The transparent bridge also makes diagonal pointer movement
+   forgiving without changing the navigation layout.
+*/
+.dropdown::after {
+    content: "";
     position: absolute;
     top: 100%;
+    left: -14px;
+    width: calc(100% + 28px);
+    height: 14px;
+}
+
+.dropdown-content {
+    display: block;
+    position: absolute;
+    top: calc(100% + 10px);
     left: 0;
     min-width: 240px;
     background-color: white;
     padding: 12px 0;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(-4px);
+    transition: opacity 0.15s ease, transform 0.15s ease,
+                visibility 0s linear 0.15s;
 }
 
 .dropdown-content a {
@@ -125,8 +145,13 @@ body {
     color: #777;
 }
 
-.dropdown:hover .dropdown-content {
-    display: block;
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+    transition-delay: 0s;
 }
 
 
