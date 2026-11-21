@@ -675,10 +675,10 @@ body {
 
 .profile-photo {
     display: block;
-    width: 100%;
-    max-width: 430px;
-    height: 480px;
+    width: 280px;
+    height: 280px;
     margin: 0 auto 35px;
+    border-radius: 50%;
     object-fit: cover;
     object-position: center top;
 }
@@ -1331,10 +1331,8 @@ footer p {
     }
 
     .profile-photo {
-        width: 100%;
-        max-width: 400px;
-
-        height: auto;
+        width: 240px;
+        height: 240px;
     }
 
 
