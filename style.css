@@ -633,7 +633,7 @@ body {
 
 .team-page {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1250px;
 
     margin: 0 auto;
     padding: 80px 7%;
@@ -647,11 +647,16 @@ body {
 }
 
 .team-category {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 60px;
+    row-gap: 80px;
     margin-bottom: 100px;
 }
 
 .category-title {
-    margin-bottom: 45px;
+    grid-column: 1 / -1;
+    margin-bottom: 15px;
 
     padding-bottom: 15px;
 
@@ -661,25 +666,21 @@ body {
 }
 
 .person-profile {
-    display: grid;
-
-    grid-template-columns: 280px 1fr;
-
-    gap: 50px;
-
-    align-items: start;
-
-    margin-bottom: 70px;
+    display: block;
+    min-width: 0;
+    margin: 0;
+    padding-top: 35px;
+    border-top: 1px solid #ddd;
 }
 
 .profile-photo {
     display: block;
-
-    width: 280px;
-    height: 350px;
-
+    width: 100%;
+    max-width: 430px;
+    height: 480px;
+    margin: 0 auto 35px;
     object-fit: cover;
-    object-position: center;
+    object-position: center top;
 }
 
 .person-info h2 {
@@ -711,8 +712,7 @@ body {
 }
 
 .person-profile-no-photo {
-    grid-template-columns: 1fr;
-    margin-left: 330px;
+    margin-left: 0;
 }
 
 
@@ -1317,10 +1317,13 @@ footer p {
         font-size: 42px;
     }
 
-    .person-profile {
+    .team-category {
         grid-template-columns: 1fr;
+        row-gap: 60px;
+    }
 
-        gap: 30px;
+    .person-profile {
+        display: block;
     }
 
     .person-profile-no-photo {
@@ -1329,7 +1332,7 @@ footer p {
 
     .profile-photo {
         width: 100%;
-        max-width: 350px;
+        max-width: 400px;
 
         height: auto;
     }
