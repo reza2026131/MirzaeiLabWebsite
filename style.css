@@ -21,6 +21,8 @@ body {
 
 /* =========================================
    STANDARD HEADER
+   Used on Research, Team, Publications,
+   News and Join pages
    ========================================= */
 
 .site-header {
@@ -105,8 +107,11 @@ body {
     display: none;
 }
 
-/* Transparent bridge between Team and the menu */
-
+/*
+   Keep the dropdown active while the pointer travels from the Team link
+   to the menu. The transparent bridge also makes diagonal pointer movement
+   forgiving without changing the navigation layout.
+*/
 .dropdown::after {
     content: "";
     position: absolute;
@@ -126,17 +131,12 @@ body {
     padding: 12px 0;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     z-index: 1000;
-
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-
     transform: translateY(-4px);
-
-    transition:
-        opacity 0.15s ease,
-        transform 0.15s ease,
-        visibility 0s linear 0.15s;
+    transition: opacity 0.15s ease, transform 0.15s ease,
+                visibility 0s linear 0.15s;
 }
 
 .dropdown-content a {
@@ -154,8 +154,6 @@ body {
     color: #777;
 }
 
-/* Keep menu open while hovering, focusing or after opening details */
-
 .dropdown:hover .dropdown-content,
 .dropdown:focus-within .dropdown-content,
 .dropdown.is-open .dropdown-content,
@@ -169,7 +167,7 @@ body {
 
 
 /* =========================================
-   FULL-SCREEN HOMEPAGE
+   NEW FULL-SCREEN HOMEPAGE
    ========================================= */
 
 .mainpage-hero {
@@ -187,6 +185,7 @@ body {
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
+
     position: relative;
 }
 
@@ -197,9 +196,12 @@ body {
     width: 100%;
     height: 100%;
     min-height: 650px;
+
     padding: 32px 3% 40px;
+
     display: flex;
     flex-direction: column;
+
     color: white;
 }
 
@@ -208,9 +210,11 @@ body {
 
 .mainpage-top {
     width: 100%;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     gap: 40px;
 }
 
@@ -220,10 +224,13 @@ body {
 .mainpage-title {
     color: white;
     text-decoration: none;
+
     font-size: 38px;
     font-weight: 400;
     line-height: 1.1;
+
     white-space: nowrap;
+
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
 }
 
@@ -238,6 +245,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: flex-end;
+
     gap: 32px;
 }
 
@@ -245,9 +253,12 @@ body {
 .mainpage-nav .dropbtn {
     color: white;
     text-decoration: none;
+
     font-size: 16px;
     font-weight: 600;
+
     white-space: nowrap;
+
     text-shadow: 0 1px 6px rgba(0, 0, 0, 0.95);
 }
 
@@ -278,7 +289,9 @@ body {
 .mainpage-actions {
     display: flex;
     align-items: center;
+
     gap: 16px;
+
     margin-top: 25px;
 }
 
@@ -287,11 +300,16 @@ body {
 
 .mainpage-button {
     display: inline-block;
+
     padding: 13px 21px;
+
     background-color: white;
     color: #222;
+
     border-radius: 3px;
+
     text-decoration: none;
+
     font-size: 14px;
     font-weight: bold;
 
@@ -311,14 +329,20 @@ body {
 .mainpage-social {
     width: 38px;
     height: 38px;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     flex-shrink: 0;
+
     border-radius: 50%;
+
     background-color: white;
     color: #222;
+
     text-decoration: none;
+
     font-size: 16px;
     font-weight: bold;
 }
@@ -332,11 +356,15 @@ body {
 
 .mainpage-tagline {
     margin-top: auto;
+
     max-width: 760px;
+
     color: white;
+
     font-size: 18px;
     font-weight: 600;
     line-height: 1.5;
+
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95);
 }
 
@@ -354,15 +382,18 @@ body {
 .home-small-title {
     margin-top: 0;
     margin-bottom: 25px;
+
     font-size: 13px;
     font-weight: bold;
+
     letter-spacing: 2px;
+
     color: #777;
 }
 
 
 /* =========================================
-   HOME — RESEARCH INTRODUCTION
+   HOME - RESEARCH INTRODUCTION
    ========================================= */
 
 .home-discovery {
@@ -371,22 +402,26 @@ body {
 
 .home-discovery h2 {
     max-width: 900px;
+
     margin-top: 0;
     margin-bottom: 40px;
+
     font-size: 48px;
     line-height: 1.15;
 }
 
 .home-large-text {
     max-width: 950px;
+
     margin-bottom: 0;
+
     font-size: 21px;
     line-height: 1.8;
 }
 
 
 /* =========================================
-   HOME — RESEARCH AFFILIATIONS
+   HOME - RESEARCH AFFILIATIONS
    ========================================= */
 
 .home-affiliations {
@@ -397,6 +432,7 @@ body {
 .home-affiliations h2 {
     margin-top: 0;
     margin-bottom: 60px;
+
     font-size: 48px;
 }
 
@@ -408,18 +444,21 @@ body {
 
 .affiliation-item {
     padding: 25px 0;
+
     border-top: 1px solid #ccc;
+
     font-size: 20px;
     line-height: 1.4;
 }
 
 
 /* =========================================
-   HOME — CONTACT
+   HOME - CONTACT
    ========================================= */
 
 .home-contact {
     padding: 90px 7%;
+
     background-color: #222;
     color: white;
 }
@@ -442,6 +481,7 @@ body {
 .home-contact-details p {
     margin-top: 0;
     margin-bottom: 25px;
+
     font-size: 18px;
     line-height: 1.8;
 }
@@ -464,6 +504,7 @@ body {
 .research-page {
     width: 100%;
     max-width: 1250px;
+
     margin: 0 auto;
     padding: 80px 7%;
 }
@@ -476,6 +517,7 @@ body {
 .research-intro h1 {
     margin-top: 0;
     margin-bottom: 45px;
+
     font-size: 52px;
 }
 
@@ -490,27 +532,34 @@ body {
 .research-themes {
     display: grid;
     grid-template-columns: 1fr 1fr;
+
     column-gap: 60px;
     row-gap: 40px;
 }
 
 .research-section-title {
     grid-column: 1 / -1;
+
     margin-top: 0;
     margin-bottom: 20px;
+
     font-size: 38px;
 }
 
 .research-theme-row {
     display: flex;
     flex-direction: column;
+
     padding: 45px 0 60px;
+
     border-top: 1px solid #ddd;
 }
 
 .research-theme-row:last-of-type {
     grid-column: 1 / -1;
+
     width: calc(50% - 30px);
+
     justify-self: center;
 }
 
@@ -521,13 +570,16 @@ body {
 .research-number {
     margin-top: 0;
     margin-bottom: 15px;
+
     color: #888;
+
     font-size: 16px;
 }
 
 .research-theme-text h2 {
     margin-top: 0;
     margin-bottom: 25px;
+
     font-size: 32px;
     line-height: 1.25;
 }
@@ -544,26 +596,32 @@ body {
 
 .research-theme-image img {
     display: block;
+
     width: 100%;
     height: auto;
+
     border-radius: 4px;
 }
 
 .research-goal {
     margin-top: 80px;
+
     padding-top: 50px;
     padding-bottom: 40px;
+
     border-top: 2px solid #222;
 }
 
 .research-goal h2 {
     margin-top: 0;
     margin-bottom: 25px;
+
     font-size: 36px;
 }
 
 .research-goal p {
     max-width: 950px;
+
     font-size: 19px;
     line-height: 1.8;
 }
@@ -576,6 +634,7 @@ body {
 .team-page {
     width: 100%;
     max-width: 1200px;
+
     margin: 0 auto;
     padding: 80px 7%;
 }
@@ -583,6 +642,7 @@ body {
 .page-title {
     margin-top: 0;
     margin-bottom: 80px;
+
     font-size: 52px;
 }
 
@@ -592,23 +652,32 @@ body {
 
 .category-title {
     margin-bottom: 45px;
+
     padding-bottom: 15px;
+
     border-bottom: 1px solid #ddd;
+
     font-size: 34px;
 }
 
 .person-profile {
     display: grid;
+
     grid-template-columns: 280px 1fr;
+
     gap: 50px;
+
     align-items: start;
+
     margin-bottom: 70px;
 }
 
 .profile-photo {
     display: block;
+
     width: 280px;
     height: 350px;
+
     object-fit: cover;
     object-position: center;
 }
@@ -620,7 +689,9 @@ body {
 
 .person-info h3 {
     margin: 0 0 25px 0;
+
     color: #666;
+
     font-size: 19px;
     font-weight: normal;
 }
@@ -628,11 +699,13 @@ body {
 .person-info h4 {
     margin-top: 30px;
     margin-bottom: 8px;
+
     font-size: 18px;
 }
 
 .person-info p {
     margin-top: 0;
+
     font-size: 17px;
     line-height: 1.7;
 }
@@ -650,6 +723,7 @@ body {
 .publications-page {
     width: 100%;
     max-width: 1100px;
+
     margin: 0 auto;
     padding: 80px 7%;
 }
@@ -657,13 +731,16 @@ body {
 .publications-page > h1 {
     margin-top: 0;
     margin-bottom: 15px;
+
     font-size: 52px;
 }
 
 .publications-intro {
     margin-top: 0;
     margin-bottom: 70px;
+
     color: #666;
+
     font-size: 19px;
 }
 
@@ -674,25 +751,32 @@ body {
 
 .publication-with-image {
     display: grid;
+
     grid-template-columns: 280px 1fr;
+
     gap: 45px;
+
     align-items: start;
 }
 
 .publication-image img {
     display: block;
+
     width: 280px;
     height: auto;
 }
 
 .publication-year {
     margin-top: 0;
+
     color: #777;
+
     font-size: 16px;
 }
 
 .publication-content h2 {
     margin: 8px 0 15px;
+
     font-size: 28px;
     line-height: 1.35;
 }
@@ -705,9 +789,13 @@ body {
 
 .publication-item a {
     color: #222;
+
     font-weight: bold;
+
     text-decoration: none;
+
     border-bottom: 1px solid #222;
+
     padding-bottom: 3px;
 }
 
@@ -718,7 +806,9 @@ body {
 
 .all-publications {
     margin-top: 80px;
+
     padding-top: 40px;
+
     border-top: 2px solid #222;
 }
 
@@ -733,11 +823,17 @@ body {
 
 .scholar-button {
     display: inline-block;
+
     margin-top: 15px;
+
     padding: 14px 22px;
+
     border: 1px solid #222;
+
     color: #222;
+
     text-decoration: none;
+
     font-weight: bold;
 }
 
@@ -754,6 +850,7 @@ body {
 .news-page {
     width: 100%;
     max-width: 1100px;
+
     margin: 0 auto;
     padding: 80px 7%;
 }
@@ -761,30 +858,36 @@ body {
 .news-page > h1 {
     margin-top: 0;
     margin-bottom: 70px;
+
     font-size: 52px;
 }
 
 .news-year {
     margin-top: 60px;
     margin-bottom: 30px;
+
     font-size: 36px;
 }
 
 .news-item {
     margin-bottom: 90px;
+
     padding-top: 40px;
+
     border-top: 1px solid #ddd;
 }
 
 .news-item h2 {
     margin-top: 0;
     margin-bottom: 30px;
+
     font-size: 34px;
     line-height: 1.25;
 }
 
 .news-item h3 {
     margin-top: 35px;
+
     font-size: 23px;
 }
 
@@ -793,16 +896,29 @@ body {
     line-height: 1.75;
 }
 
+.news-image {
+    display: block;
+    width: 100%;
+    max-width: 760px;
+    height: auto;
+    margin: 35px auto 0;
+    border-radius: 4px;
+}
+
 .news-source {
     margin-top: 35px;
 }
 
 .news-source a {
     color: #222;
+
     font-size: 17px;
     font-weight: bold;
+
     text-decoration: none;
+
     border-bottom: 1px solid #222;
+
     padding-bottom: 3px;
 }
 
@@ -819,6 +935,7 @@ body {
 .join-page {
     width: 100%;
     max-width: 1100px;
+
     margin: 0 auto;
     padding: 80px 7%;
 }
@@ -826,11 +943,13 @@ body {
 .join-page > h1 {
     margin-top: 0;
     margin-bottom: 70px;
+
     font-size: 52px;
 }
 
 .join-page h2 {
     margin-bottom: 30px;
+
     font-size: 34px;
 }
 
@@ -841,8 +960,11 @@ body {
 
 .join-page a {
     color: #222;
+
     font-weight: bold;
+
     text-decoration: none;
+
     border-bottom: 1px solid #222;
 }
 
@@ -852,31 +974,38 @@ body {
 }
 
 
-/* JOIN PAGE — CCI */
+/* JOIN PAGE - CCI */
 
 .join-location {
     margin-top: 80px;
+
     padding-top: 60px;
+
     border-top: 1px solid #ddd;
 }
 
 .join-location-image {
     display: block;
+
     width: 100%;
     max-width: 900px;
     height: auto;
+
     margin: 0 auto 45px;
+
     border-radius: 4px;
 }
 
 .join-location h2 {
     margin-top: 0;
     margin-bottom: 25px;
+
     font-size: 34px;
 }
 
 .join-location p {
     max-width: 900px;
+
     font-size: 18px;
     line-height: 1.8;
 }
@@ -884,24 +1013,28 @@ body {
 
 /* =========================================
    LAB LIFE
-   Currently hidden from navigation
+   CURRENTLY HIDDEN FROM NAVIGATION
    ========================================= */
 
 .lab-life-page {
     width: 100%;
     max-width: 1250px;
+
     margin: 0 auto;
+
     padding: 80px 7% 120px;
 }
 
 .lab-life-intro {
     max-width: 1000px;
+
     margin-bottom: 70px;
 }
 
 .lab-life-intro h1 {
     margin-top: 0;
     margin-bottom: 45px;
+
     font-size: 52px;
 }
 
@@ -912,19 +1045,24 @@ body {
 
 .lab-life-gallery {
     display: grid;
+
     grid-template-columns: repeat(2, 1fr);
+
     gap: 20px;
 }
 
 .gallery-photo {
     display: block;
+
     width: 100%;
     height: 380px;
+
     object-fit: cover;
 }
 
 .gallery-photo-large {
     grid-column: 1 / -1;
+
     height: 600px;
 }
 
@@ -935,8 +1073,11 @@ body {
 
 footer {
     width: 100%;
+
     padding: 25px 7%;
+
     border-top: 1px solid #eee;
+
     font-size: 14px;
 }
 
@@ -950,6 +1091,7 @@ footer p {
    ========================================= */
 
 @media (max-width: 1100px) {
+
     .site-header {
         padding-left: 4%;
         padding-right: 4%;
@@ -968,14 +1110,16 @@ footer p {
     .site-header .dropbtn {
         font-size: 16px;
     }
+
 }
 
 
 /* =========================================
-   HOMEPAGE MOBILE/TABLET
+   HOMEPAGE MOBILE / TABLET
    ========================================= */
 
 @media (max-width: 900px) {
+
     .mainpage-hero {
         height: 100vh;
         min-height: 600px;
@@ -983,12 +1127,14 @@ footer p {
 
     .mainpage-overlay {
         min-height: 600px;
+
         padding: 25px 7% 35px;
     }
 
     .mainpage-top {
         flex-direction: column;
         align-items: flex-start;
+
         gap: 20px;
     }
 
@@ -998,7 +1144,9 @@ footer p {
 
     .mainpage-nav {
         justify-content: flex-start;
+
         flex-wrap: wrap;
+
         gap: 8px 20px;
     }
 
@@ -1009,8 +1157,10 @@ footer p {
 
     .mainpage-tagline {
         max-width: 600px;
+
         font-size: 17px;
     }
+
 }
 
 
@@ -1019,11 +1169,15 @@ footer p {
    ========================================= */
 
 @media (max-width: 800px) {
+
     .site-header {
         flex-direction: column;
         align-items: flex-start;
+
         min-height: auto;
+
         gap: 15px;
+
         padding: 15px 7% 20px;
     }
 
@@ -1034,9 +1188,12 @@ footer p {
 
     .site-header nav {
         width: 100%;
+
         justify-content: flex-start;
         flex-wrap: wrap;
+
         gap: 8px 20px;
+
         margin-left: 0;
     }
 
@@ -1048,12 +1205,16 @@ footer p {
 
     .site-header .x-link {
         margin-left: 0;
+
         font-size: 20px;
     }
 
     .dropdown-content {
         min-width: 220px;
     }
+
+
+    /* HOME SECTIONS */
 
     .home-discovery,
     .home-affiliations {
@@ -1081,12 +1242,16 @@ footer p {
 
     .home-contact-grid {
         grid-template-columns: 1fr;
+
         gap: 30px;
     }
 
     .home-contact h2 {
         font-size: 36px;
     }
+
+
+    /* RESEARCH */
 
     .research-page {
         padding-top: 50px;
@@ -1110,13 +1275,16 @@ footer p {
 
     .research-themes {
         grid-template-columns: 1fr;
+
         gap: 20px;
     }
 
     .research-theme-row,
     .research-theme-row:last-of-type {
         grid-column: 1;
+
         width: 100%;
+
         padding: 40px 0;
     }
 
@@ -1136,17 +1304,22 @@ footer p {
         font-size: 17px;
     }
 
+
+    /* TEAM */
+
     .team-page {
         padding-top: 50px;
     }
 
     .page-title {
         margin-bottom: 50px;
+
         font-size: 42px;
     }
 
     .person-profile {
         grid-template-columns: 1fr;
+
         gap: 30px;
     }
 
@@ -1157,8 +1330,12 @@ footer p {
     .profile-photo {
         width: 100%;
         max-width: 350px;
+
         height: auto;
     }
+
+
+    /* PUBLICATIONS */
 
     .publications-page {
         padding-top: 50px;
@@ -1170,18 +1347,23 @@ footer p {
 
     .publication-with-image {
         grid-template-columns: 1fr;
+
         gap: 25px;
     }
 
     .publication-image img {
         width: 100%;
         max-width: 450px;
+
         height: auto;
     }
 
     .publication-content h2 {
         font-size: 25px;
     }
+
+
+    /* NEWS */
 
     .news-page {
         padding-top: 50px;
@@ -1199,6 +1381,9 @@ footer p {
         font-size: 28px;
     }
 
+
+    /* JOIN */
+
     .join-page {
         padding-top: 50px;
     }
@@ -1211,6 +1396,9 @@ footer p {
     .join-location h2 {
         font-size: 28px;
     }
+
+
+    /* LAB LIFE */
 
     .lab-life-page {
         padding-top: 50px;
@@ -1226,15 +1414,18 @@ footer p {
 
     .lab-life-gallery {
         grid-template-columns: 1fr;
+
         gap: 15px;
     }
 
     .gallery-photo,
     .gallery-photo-large {
         grid-column: 1;
+
         width: 100%;
         height: auto;
     }
+
 }
 
 
@@ -1243,6 +1434,7 @@ footer p {
    ========================================= */
 
 @media (max-width: 500px) {
+
     .lab-logo {
         width: 135px;
         height: 70px;
@@ -1250,6 +1442,7 @@ footer p {
 
     .mainpage-hero {
         min-height: 550px;
+
         background-position: center center;
     }
 
@@ -1279,4 +1472,6 @@ footer p {
     .home-contact h2 {
         font-size: 32px;
     }
+
 }
+
