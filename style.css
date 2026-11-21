@@ -1476,3 +1476,551 @@ footer p {
 
 }
 
+
+
+/* =========================================
+   RESEARCH EXPLAINED PAGE
+   ========================================= */
+
+.research-explained-link,
+.explained-button {
+    display: inline-block;
+    margin-top: 24px;
+    padding: 14px 20px;
+    border: 1px solid #222;
+    color: #222;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 700;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.research-explained-link:hover,
+.explained-button:hover {
+    background-color: #222;
+    color: #fff;
+}
+
+.explained-page {
+    overflow: hidden;
+}
+
+.explained-hero,
+.explained-section,
+.explained-next {
+    width: min(1180px, 86%);
+    margin: 0 auto;
+}
+
+.explained-hero {
+    min-height: 650px;
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(360px, 0.9fr);
+    gap: 80px;
+    align-items: center;
+    padding: 90px 0 110px;
+}
+
+.explained-kicker {
+    margin: 0 0 20px;
+    color: #237c82;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+}
+
+.explained-hero h1 {
+    max-width: 760px;
+    margin: 0 0 30px;
+    font-size: clamp(46px, 6vw, 78px);
+    line-height: 1.03;
+    letter-spacing: -0.04em;
+}
+
+.explained-lead {
+    max-width: 760px;
+    margin: 0;
+    font-size: 20px;
+    line-height: 1.75;
+}
+
+.cell-scene {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1;
+    max-width: 470px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background:
+        radial-gradient(circle at center, rgba(96, 182, 180, 0.15), transparent 54%),
+        #f4f9f9;
+    box-shadow: inset 0 0 0 1px rgba(35, 124, 130, 0.12);
+}
+
+.tumour-cluster {
+    position: absolute;
+    inset: 27%;
+    animation: cluster-breathe 4s ease-in-out infinite;
+}
+
+.tumour-cell,
+.immune-cell,
+.cell-signal {
+    position: absolute;
+    display: block;
+    border-radius: 50%;
+}
+
+.tumour-cell {
+    width: 44%;
+    aspect-ratio: 1;
+    background: #7f4a8c;
+    box-shadow: inset -8px -8px 16px rgba(47, 18, 55, 0.18);
+}
+
+.tumour-cell-one { left: 5%; top: 20%; }
+.tumour-cell-two { right: 6%; top: 7%; }
+.tumour-cell-three { left: 28%; bottom: 3%; }
+.tumour-cell-four { right: -2%; bottom: 16%; }
+.tumour-cell-five {
+    left: 29%;
+    top: 29%;
+    background: #9b65a7;
+}
+
+.immune-cell {
+    width: 12%;
+    aspect-ratio: 1;
+    background: #48a9b0;
+    border: 7px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 8px 20px rgba(35, 124, 130, 0.18);
+}
+
+.immune-cell-one {
+    left: 12%;
+    top: 16%;
+    animation: immune-float-one 5s ease-in-out infinite;
+}
+
+.immune-cell-two {
+    right: 10%;
+    top: 42%;
+    animation: immune-float-two 6s ease-in-out infinite;
+}
+
+.immune-cell-three {
+    left: 24%;
+    bottom: 11%;
+    animation: immune-float-three 5.5s ease-in-out infinite;
+}
+
+.cell-signal {
+    width: 3.2%;
+    aspect-ratio: 1;
+    background: #df9a3a;
+    animation: signal-pulse 2.2s ease-in-out infinite;
+}
+
+.cell-signal-one { left: 30%; top: 24%; }
+.cell-signal-two { right: 28%; top: 34%; animation-delay: 0.7s; }
+.cell-signal-three { left: 40%; bottom: 27%; animation-delay: 1.3s; }
+
+.explained-section {
+    padding: 100px 0;
+    border-top: 1px solid #dfe7e7;
+}
+
+.explained-section-heading {
+    display: grid;
+    grid-template-columns: 0.75fr 1.25fr;
+    gap: 60px;
+    align-items: start;
+    margin-bottom: 55px;
+}
+
+.explained-section-heading h2,
+.explained-focus h2,
+.explained-next h2 {
+    margin: 0;
+    font-size: clamp(34px, 4.6vw, 58px);
+    line-height: 1.1;
+    letter-spacing: -0.025em;
+}
+
+.explained-copy {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 60px;
+    margin-left: 31%;
+}
+
+.explained-copy p,
+.explained-focus p {
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.explained-question-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.explained-question {
+    padding: 34px;
+    border: 1px solid #dfe7e7;
+    border-radius: 14px;
+    background: #fff;
+}
+
+.explained-question h3 {
+    min-height: 86px;
+    margin: 28px 0 18px;
+    font-size: 24px;
+    line-height: 1.2;
+}
+
+.explained-question p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.question-icon {
+    position: relative;
+    width: 74px;
+    height: 74px;
+}
+
+.question-icon-signals span {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #48a9b0;
+}
+
+.question-icon-signals span:nth-child(1) { left: 0; top: 28px; }
+.question-icon-signals span:nth-child(2) { right: 0; top: 8px; background: #7f4a8c; }
+.question-icon-signals span:nth-child(3) { right: 5px; bottom: 0; background: #df9a3a; }
+
+.question-icon-signals::before,
+.question-icon-signals::after {
+    content: "";
+    position: absolute;
+    left: 17px;
+    width: 42px;
+    height: 1px;
+    background: #94aeb0;
+    transform-origin: left center;
+}
+
+.question-icon-signals::before { top: 34px; transform: rotate(-25deg); }
+.question-icon-signals::after { top: 39px; transform: rotate(28deg); }
+
+.question-icon-shield {
+    width: 60px;
+    height: 70px;
+    border: 3px solid #7f4a8c;
+    border-radius: 26px 26px 34px 34px;
+}
+
+.question-icon-shield::after {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 32px;
+    left: 18px;
+    top: 16px;
+    border-right: 4px solid #7f4a8c;
+    border-bottom: 4px solid #7f4a8c;
+    transform: rotate(45deg);
+}
+
+.question-icon-target {
+    border: 3px solid #48a9b0;
+    border-radius: 50%;
+}
+
+.question-icon-target::before,
+.question-icon-target::after,
+.question-icon-target span {
+    content: "";
+    position: absolute;
+    border: 2px solid #48a9b0;
+    border-radius: 50%;
+}
+
+.question-icon-target::before { inset: 12px; }
+.question-icon-target::after { inset: 25px; background: #df9a3a; border-color: #df9a3a; }
+
+.explained-methods {
+    width: 100%;
+    max-width: none;
+    padding-left: 7%;
+    padding-right: 7%;
+    background: #162f32;
+    color: #fff;
+    border-top: 0;
+}
+
+.explained-methods .explained-section-heading {
+    width: min(1180px, 100%);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.explained-methods .explained-kicker {
+    color: #86d8d5;
+}
+
+.explained-method-list {
+    width: min(900px, 100%);
+    margin: 0 auto;
+}
+
+.explained-method-list article {
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    gap: 30px;
+    padding: 35px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.method-marker {
+    width: 48px;
+    height: 48px;
+    display: grid;
+    place-items: center;
+    border: 1px solid #86d8d5;
+    border-radius: 50%;
+    color: #86d8d5;
+    font-weight: 700;
+}
+
+.explained-method-list h3 {
+    margin: 0 0 10px;
+    font-size: 24px;
+}
+
+.explained-method-list p {
+    max-width: 700px;
+    margin: 0;
+    color: #d9e8e8;
+    font-size: 17px;
+    line-height: 1.75;
+}
+
+.explained-focus {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(300px, 0.9fr);
+    gap: 90px;
+    align-items: center;
+}
+
+.explained-focus-text {
+    display: grid;
+    gap: 24px;
+}
+
+.focus-illustration {
+    position: relative;
+    width: min(380px, 100%);
+    aspect-ratio: 1;
+    margin: 0 auto;
+}
+
+.focus-ring,
+.focus-dot {
+    position: absolute;
+    border-radius: 50%;
+}
+
+.focus-ring {
+    border: 2px solid rgba(72, 169, 176, 0.4);
+    animation: ring-pulse 4s ease-in-out infinite;
+}
+
+.focus-ring-one { inset: 4%; }
+.focus-ring-two { inset: 22%; animation-delay: 0.8s; }
+.focus-ring-three { inset: 40%; animation-delay: 1.6s; }
+
+.focus-dot {
+    width: 15%;
+    aspect-ratio: 1;
+    background: #7f4a8c;
+    box-shadow: 0 10px 24px rgba(64, 31, 72, 0.16);
+    animation: dot-drift 5s ease-in-out infinite;
+}
+
+.focus-dot-one { left: 9%; top: 38%; }
+.focus-dot-two { right: 12%; top: 18%; animation-delay: 0.8s; background: #48a9b0; }
+.focus-dot-three { right: 18%; bottom: 13%; animation-delay: 1.6s; background: #df9a3a; }
+.focus-dot-four { left: 39%; top: 42%; animation-delay: 2.4s; }
+
+.explained-glossary {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0 60px;
+    margin: 0;
+}
+
+.explained-glossary div {
+    padding: 30px 0;
+    border-top: 1px solid #dfe7e7;
+}
+
+.explained-glossary dt {
+    margin-bottom: 10px;
+    font-size: 21px;
+    font-weight: 700;
+}
+
+.explained-glossary dd {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.explained-next {
+    padding: 100px 0 120px;
+    text-align: center;
+}
+
+.explained-next h2 {
+    max-width: 760px;
+    margin: 0 auto 20px;
+}
+
+@keyframes cluster-breathe {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+@keyframes immune-float-one {
+    0%, 100% { transform: translate(0, 0); }
+    50% { transform: translate(18px, 14px); }
+}
+
+@keyframes immune-float-two {
+    0%, 100% { transform: translate(0, 0); }
+    50% { transform: translate(-20px, 12px); }
+}
+
+@keyframes immune-float-three {
+    0%, 100% { transform: translate(0, 0); }
+    50% { transform: translate(14px, -18px); }
+}
+
+@keyframes signal-pulse {
+    0%, 100% { opacity: 0.35; transform: scale(0.75); }
+    50% { opacity: 1; transform: scale(1.35); }
+}
+
+@keyframes ring-pulse {
+    0%, 100% { opacity: 0.35; transform: scale(0.96); }
+    50% { opacity: 1; transform: scale(1.03); }
+}
+
+@keyframes dot-drift {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-14px); }
+}
+
+@media (max-width: 900px) {
+    .explained-hero {
+        grid-template-columns: 1fr;
+        gap: 50px;
+        padding-top: 70px;
+    }
+
+    .cell-scene {
+        max-width: 420px;
+    }
+
+    .explained-section-heading,
+    .explained-copy,
+    .explained-focus {
+        grid-template-columns: 1fr;
+    }
+
+    .explained-copy {
+        gap: 20px;
+        margin-left: 0;
+    }
+
+    .explained-question-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .explained-question h3 {
+        min-height: 0;
+    }
+
+    .explained-focus {
+        gap: 50px;
+    }
+}
+
+@media (max-width: 650px) {
+    .explained-hero,
+    .explained-section,
+    .explained-next {
+        width: 86%;
+    }
+
+    .explained-hero {
+        min-height: 0;
+        padding: 60px 0 80px;
+    }
+
+    .explained-hero h1 {
+        font-size: 42px;
+    }
+
+    .explained-lead {
+        font-size: 18px;
+    }
+
+    .explained-section {
+        padding: 75px 0;
+    }
+
+    .explained-section-heading {
+        gap: 10px;
+        margin-bottom: 35px;
+    }
+
+    .explained-question {
+        padding: 28px;
+    }
+
+    .explained-glossary {
+        grid-template-columns: 1fr;
+    }
+
+    .explained-methods {
+        width: 100%;
+    }
+
+    .explained-method-list article {
+        grid-template-columns: 48px 1fr;
+        gap: 18px;
+    }
+
+    .method-marker {
+        width: 42px;
+        height: 42px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .tumour-cluster,
+    .immune-cell,
+    .cell-signal,
+    .focus-ring,
+    .focus-dot {
+        animation: none;
+    }
+}
